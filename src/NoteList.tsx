@@ -34,7 +34,7 @@ export function NoteList({ availableTags, notes, deleteTag, updateTag }: NoteLis
     <>
       <Row className="align-items-center mb-4">
         <Col>
-          <h1>Notes</h1>
+          <img src="https://rafdo-search.vercel.app/images/logo.png" alt="Rafdo" width="100"  /><h1>Notes</h1>
         </Col>
         <Col xs="auto">
           <Stack gap={2} direction="horizontal">
@@ -45,6 +45,9 @@ export function NoteList({ availableTags, notes, deleteTag, updateTag }: NoteLis
           </Stack>
         </Col>
       </Row>
+      <hr />
+      <h2 className="text-center">Search Notes</h2>
+
       <Form>
         <Row className="mb-4">
           <Col>
@@ -80,6 +83,8 @@ export function NoteList({ availableTags, notes, deleteTag, updateTag }: NoteLis
           </Col>
         </Row>
       </Form>
+      <hr />
+      <h2 className="text-center">All Notes</h2>
       <Row xs={1} sm={2} lg={3} xl={4} className="g-3">
         {filteredNotes.length === 0 && (
           <p>No notes. <Link to="/new">Create one!</Link></p>
@@ -91,6 +96,7 @@ export function NoteList({ availableTags, notes, deleteTag, updateTag }: NoteLis
         ))}
       </Row>
       <EditTagsModal updateTag={updateTag} deleteTag={deleteTag} availableTags={availableTags} show={editTagsModalOpen} handleClose={() => setEditTagsModalOpen(false)} />
+      
     </>
   )
 }

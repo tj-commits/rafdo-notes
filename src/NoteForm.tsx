@@ -74,7 +74,7 @@ export function NoteForm({
         </Row>
         <Form.Group controlId="markdown">
           <Form.Label>Body</Form.Label>
-          <Form.Control required as="textarea" ref={markdownRef} rows={10} defaultValue={markdown} />
+          <Form.Control required as="textarea" ref={markdownRef} rows={7} defaultValue={markdown} />
         </Form.Group>
         <Stack direction="horizontal" gap={2} className="justify-content-end">
           <Button type="submit" variant="primary">

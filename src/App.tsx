@@ -8,6 +8,7 @@ import { NoteList } from "./NoteList"
 import { NoteLayout } from "./NoteLayout"
 import { Note } from "./Note"
 import { EditNote } from "./EditNote"
+import { Footer } from "./Footer"
 
 export type Note = {
   id: string
@@ -102,6 +103,7 @@ function App() {
     })
   }
   return (
+    <>
     <Container className="my-4">
       <Routes>
         <Route
@@ -134,6 +136,8 @@ function App() {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Container>
+    <Footer />
+    </>
   )
 }
 
